@@ -1,54 +1,51 @@
 body {
+  margin: 0;
   height: 100vh;
+  background: #f4f7fb;
   display: flex;
-  align-items: center;
   justify-content: center;
-  background: #111;
+  align-items: center;
+  font-family: Arial, sans-serif;
 }
 
-/* Loader container */
-.loader {
-  --time-animation: 2s;
-  width: 100px;
-  height: 100px;
-  position: relative;
-  animation: colorize calc(var(--time-animation) * 3) ease-in-out infinite;
+.loader-card {
+  width: 320px;
+  padding: 40px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  text-align: center;
+  .parcel-box {
+  width: 80px;
+  height: 80px;
+  background: #8B5A2B; /* Dark cardboard color */
+  margin: auto;
+  border-radius: 8px;
+  animation: spin 4s linear infinite;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
 }
 
-/* PNG Image */
-.circle-png {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  animation: spin var(--time-animation) linear infinite;
-  filter: drop-shadow(0 0 15px rgba(255,191,72,0.6));
 }
 
-/* Rotation animation */
-@keyframes spin {
+.message {
+  margin-top: 25px;
+  font-size: 16px;
+  color: #333;
+}
+
+/* ROTATING PARCEL */
+.parcel {
+  font-size: 80px;
+  display: inline-block;
+  animation: rotateParcel 2s linear infinite;
+}
+
+/* KEYFRAMES */
+@keyframes rotateParcel {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
-  }
-}
-
-/* Optional color shifting (same feel as your old loader) */
-@keyframes colorize {
-  0% {
-    filter: hue-rotate(0deg);
-  }
-  25% {
-    filter: hue-rotate(-30deg);
-  }
-  50% {
-    filter: hue-rotate(-60deg);
-  }
-  75% {
-    filter: hue-rotate(-30deg);
-  }
-  100% {
-    filter: hue-rotate(0deg);
   }
 }

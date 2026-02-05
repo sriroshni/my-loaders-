@@ -1,14 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>PNG Loader</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Processing Loader</title>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: #f4f7fb;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+    }
+
+    .loader-card {
+      width: 320px;
+      padding: 40px;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      text-align: center;
+}
+
+    .message {
+      margin-top: 25px;
+      font-size: 16px;
+      color: #333;
+    }
+
+    /* PARCEL */
+    .parcel {
+      font-size: 80px;
+      display: inline-block;
+      animation: spin 3s linear infinite; /* Slower speed */;
+    }
+
+    /* ROTATION */
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+  </style>
 </head>
+
 <body>
 
-  <div class="loader">
-    <img src="circle.png" alt="Loading..." class="circle-png">
+  <div class="loader-card">
+    <div class="parcel">📦</div>
+    <p class="message">Packing your parcel securely...</p>
   </div>
 
 </body>
