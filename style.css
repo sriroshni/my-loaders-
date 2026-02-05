@@ -1,74 +1,41 @@
-/* Page Center */
 body {
   margin: 0;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg, #111, #1f1f1f);
-  font-family: Arial, sans-serif;
+  background: #ffffff;
+  font-family: "Segoe UI", sans-serif;
+  color: #2c2c2c;
 }
 
-/* Container */
-.loader-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Payment Card */
-.payment-card {
-  width: 280px;
-  height: 180px;
-  background: linear-gradient(145deg, #2c2c2c, #1a1a1a);
-  border-radius: 16px;
-  padding: 20px;
-  box-shadow: 0 0 25px rgba(0, 255, 170, 0.3);
-  position: relative;
-  overflow: hidden;
-}
-
-/* Card Chip */
-.chip {
-  width: 50px;
-  height: 35px;
-  background:;
-  border-radius: 6px;
-  margin-bottom: 40px;
-}
-
-/* Loader Bar Background */
-.loader-bar {
-  width: 100%;
-  height: 8px;
-  background: #333;
-  border-radius: 20px;
-  overflow: hidden;
-}
-
-/* Progress Animation */
-.progress {
-  width: 40%;
-  height: 100%;
-  background: linear-gradient(90deg, #00ffcc, #00ff88);
-  border-radius: 20px;
-  animation: loading 1.5s infinite;
-}
-
-@keyframes loading {
-  0% {
-    margin-left: -40%;
-  }
-  100% {
-    margin-left: 100%;
-  }
-}
-
-/* Text */
-.text {
-  margin-top: 20px;
-  color: #00ffcc;
-  font-size: 14px;
-  letter-spacing: 1px;
+.screen {
   text-align: center;
+}
+
+/* Emoji Loader */
+.namaste {
+  font-size: 70px;
+  margin-bottom: 20px;
+  animation: bow 2s ease-in-out infinite;
+}
+
+/* Smooth respectful bow animation */
+@keyframes bow {
+  0%,100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(10px) scale(1.05);
+  }
+}
+
+h2 {
+  margin: 0 0 5px;
+  font-weight: 600;
+}
+
+p {
+  font-size: 14px;
+  color: #777;
 }
