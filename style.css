@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+  font-family: "Segoe UI", sans-serif;
+  color: #2c2c2c;
+}
+
+.screen {
+  text-align: center;
+}
+
+/* Emoji Loader */
+.namaste {
+  font-size: 70px;
+  margin-bottom: 20px;
+  animation: bow 2s ease-in-out infinite;
+}
+
+/* Smooth respectful bow animation */
+@keyframes bow {
+  0%,100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(10px) scale(1.05);
+  }
+}
+
+h2 {
+  margin: 0 0 5px;
+  font-weight: 600;
+}
+
+p {
+  font-size: 14px;
+  color: #777;
+}
