@@ -1,51 +1,74 @@
+/* Page Center */
 body {
   margin: 0;
   height: 100vh;
-  background: #f4f7fb;
   display: flex;
   justify-content: center;
   align-items: center;
+  background: linear-gradient(135deg, #111, #1f1f1f);
   font-family: Arial, sans-serif;
 }
 
-.loader-card {
-  width: 320px;
-  padding: 40px;
-  background: white;
+/* Container */
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Payment Card */
+.payment-card {
+  width: 280px;
+  height: 180px;
+  background: linear-gradient(145deg, #2c2c2c, #1a1a1a);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 0 25px rgba(0, 255, 170, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Card Chip */
+.chip {
+  width: 50px;
+  height: 35px;
+  background:;
+  border-radius: 6px;
+  margin-bottom: 40px;
+}
+
+/* Loader Bar Background */
+.loader-bar {
+  width: 100%;
+  height: 8px;
+  background: #333;
   border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  overflow: hidden;
+}
+
+/* Progress Animation */
+.progress {
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(90deg, #00ffcc, #00ff88);
+  border-radius: 20px;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    margin-left: -40%;
+  }
+  100% {
+    margin-left: 100%;
+  }
+}
+
+/* Text */
+.text {
+  margin-top: 20px;
+  color: #00ffcc;
+  font-size: 14px;
+  letter-spacing: 1px;
   text-align: center;
-  .parcel-box {
-  width: 80px;
-  height: 80px;
-  background: #8B5A2B; /* Dark cardboard color */
-  margin: auto;
-  border-radius: 8px;
-  animation: spin 4s linear infinite;
-  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
-}
-
-}
-
-.message {
-  margin-top: 25px;
-  font-size: 16px;
-  color: #333;
-}
-
-/* ROTATING PARCEL */
-.parcel {
-  font-size: 80px;
-  display: inline-block;
-  animation: rotateParcel 2s linear infinite;
-}
-
-/* KEYFRAMES */
-@keyframes rotateParcel {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }

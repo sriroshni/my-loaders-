@@ -1,59 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Processing Loader</title>
-
-  <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      background: #f4f7fb;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-family: Arial, sans-serif;
-    }
-
-    .loader-card {
-      width: 320px;
-      padding: 40px;
-      background: white;
-      border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-      text-align: center;
-}
-
-    .message {
-      margin-top: 25px;
-      font-size: 16px;
-      color: #333;
-    }
-
-    /* PARCEL */
-    .parcel {
-      font-size: 80px;
-      display: inline-block;
-      animation: spin 3s linear infinite; /* Slower speed */;
-    }
-
-    /* ROTATION */
-    @keyframes spin {
-      0% {
-        transform: rotate(0deg);
-      }
-      100% {
-        transform: rotate(360deg);
-      }
-    }
-
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Loader</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-  <div class="loader-card">
-    <div class="parcel">📦</div>
-    <p class="message">Packing your parcel securely...</p>
+  <div class="loader-container">
+    <div class="payment-card">
+      <div class="chip"></div>
+      <div class="loader-bar">
+        <div class="progress"></div>
+      </div>
+      <p class="text">Processing Payment...</p>
+    </div>
   </div>
 
 </body>
