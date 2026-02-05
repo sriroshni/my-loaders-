@@ -1,15 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>PNG Loader</title>
+  <title>Track Shipment</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <div class="loader">
-    <img src="circle.png" alt="Loading..." class="circle-png">
+<div class="card">
+  <h2>Track Shipment</h2>
+
+  <div class="tracker">
+
+    <!-- Warehouse -->
+    <div class="point">
+      <div class="icon active">🏭</div>
+      <p>Warehouse</p>
+    </div>
+
+    <!-- Track -->
+    <div class="track">
+      <div class="track-fill"></div>
+      <div class="truck">🚚</div>
+    </div>
+
+    <!-- Destination -->
+    <div class="point">
+      <div class="icon">🏠</div>
+      <p>Destination</p>
+    </div>
+
   </div>
+
+  <p class="status">Shipment is on the way...</p>
+</div>
 
 </body>
 </html>
